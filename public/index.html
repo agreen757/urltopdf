@@ -41,7 +41,7 @@
             data:{url:data},
             url: '\scrape',
             success: function(data){
-                $('body').append('<center><p style="color:green;size:1.3em;font-style:italic">request submitted!</p></center>');
+                $('body').append('<center><p style="color:green;size:1.3em;font-style:italic">All done!</p></center>');
                 var selection = data;
                 $('<form action="'+ "/pdfdownload" +'" method="'+ ('post') +'">'+'<input type="hidden" name="file" value="'+selection+'"'+'/></form>').appendTo('body').submit().remove();
             }
